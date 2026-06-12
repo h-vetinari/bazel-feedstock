@@ -1,4 +1,4 @@
-{% set version = "9.0.1" %}
+{% set version = "9.1.1" %}
 {% set base_url = "https://github.com/bazelbuild/bazel/releases/download" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: {{ base_url }}/{{ version }}/bazel-{{ version }}-dist.zip
-    sha256: 3f336b4510a8210f954fa3a7d6cfbd271b6f9d639732fdc11c000b6fbfca3fbe
+    sha256: a6f66e26c8f4ca04fa83c796a404eff0544bd78336fbbcd122c9e10cbec4a5d7
     patches:
       # bazel depends on https://github.com/conda-forge/singlejar-feedstock to build,
       # which patches the same sources; the patches from singlejar should either be
@@ -22,7 +22,7 @@ source:
       - patches/0008-Build-with-native-dependencies.patch                        # [unix]
 
   - url: {{ base_url }}/{{ version }}/bazel-{{ version }}-windows-x86_64.exe  # [win]
-    sha256: 481da3cc9ebf0dd58139b1875319d9c8a0169d14f4c590ce27629c593001e85e  # [win]
+    sha256: 65f3484025c95a9f93647fd6edb84b19c15c67d5265d364f17843fd12c5d28fe  # [win]
 
 build:
   number: 0
