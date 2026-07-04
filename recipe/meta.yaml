@@ -32,7 +32,7 @@ source:
       - patches/0016-avoid-linking-to-grpc-_unsecure-use-regular-variant-.patch     # [unix]
 
 build:
-  number: 1
+  number: 2
   ignore_prefix_files: true
   binary_relocation: false
   # We are currently unable to select a JDK toolchain for the build.
